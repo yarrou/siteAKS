@@ -1,0 +1,37 @@
+plugins {
+	id 'org.springframework.boot' version '2.5.0-SNAPSHOT'
+	id 'io.spring.dependency-management' version '1.0.10.RELEASE'
+	id 'java'
+	id 'application'
+}
+
+group = 'xyz.alexkononsol'
+version = '0.0.3-SNAPSHOT'
+sourceCompatibility = '11'
+
+repositories {
+	mavenCentral()
+	maven { url 'https://repo.spring.io/milestone' }
+	maven { url 'https://repo.spring.io/snapshot' }
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter-security'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+jar {
+	manifest {
+		attributes(
+				'Main-Class': 'site.alexkononsol.siteAKS.SiteAksApplication'
+		)
+	}
+}
+application {
+	mainClass = 'site.alexkononsol.siteAKS.SiteAksApplication'
+}
+
+test {
+	useJUnitPlatform()
+}
