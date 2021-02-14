@@ -4,7 +4,7 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
-<html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
 	<head>
 		<title>AlexKononSol</title>
 		<meta charset="utf-8" />
@@ -30,16 +30,29 @@
 		<!-- Page Wrapper -->
 			<div id="page-wrapper">
 
+
 				<!-- Wrapper -->
 					<div id="wrapper">
 
+
 						<!-- Panel (Banner) -->
 							<section class="panel banner right">
+
 								<div class="content color00 span-3-75">
-									<h1 class="major" ><font color="#000000">Приветствую, <br />
-										меня зовут - <br />
-										Александр<br />
-										Кононович</font></h1>
+									<div align="right">
+										<ul class="hr">
+											<li>
+												<a th:href="@{/(lng='by')}" ><img src="images/by-icon.png"></a>
+											</li>
+											<li>
+												<a th:href="@{/(lng='ru')}" ><img src="images/ru-icon.png"></a>
+											</li>
+											<li>
+												<a th:href="@{/(lng='eng')}" ><img src="images/engl-icon.png"></a>
+											</li>
+										</ul>
+									</div>
+									<span th:utext="${greeting}"></span>
 									<!--<p>This is <strong>Ethereal</strong>, a free site template by AJ for <a href="https://html5up.net">HTML5 UP</a>. It’s fully responsive, built on HTML5 and CSS3, and released entirely for free under the Creative Commons license. Hope you dig it :)</p>-->
 									<ul class="actions">
 										<li><a href="#first" class="button primary color1 circle icon solid fa-angle-right">Next</a></li>
@@ -53,8 +66,7 @@
 						<!-- Panel (Spotlight) -->
 							<section class="panel spotlight medium right" id="first">
 								<div class="content span-7">
-									<h2 class="major">Профессия и хобби.</h2>
-									<p>Продолжительное время я работал в сфере обслуживания и ремонта на ведущем горно-добывающем предприятии республики. Программирование на java было занятием для души. Однако после событий лета 2020 я принял решение полностью сменить профессию. </p>
+									<span th:utext="${history}"></span>
 								</div>
 								<div class="image filtered tinted" data-position="top left">
 									<img src="images/4ru-sharp.jpg" alt="" />
@@ -65,8 +77,7 @@
 							<section class="panel spotlight medium right" id="name1" >
 								<div class="content span-5">
 									<div>
-										<h2 class="major">Переобучение.</h2>
-										<p>По менторской программе переобучения от "ByHelp" я под руководством программиста с 12 стажем изучал следующие технологии : <b>Spring framework</b>, <b>Git</b>, <b>SQL</b>, <b>HTML</b>, <b>CSS</b>, <b>JS</b>.</p>
+										<span th:utext="${retraining}"></span>
 									</div>
 									<div class="inner">
 										<ul class="hr">
@@ -90,8 +101,7 @@
 						<!--Panel (Spotlight)-->
 							<section class="panel spotlight large left">
 								<div class="content span-5">
-									<h2 class="major">Примеры работ.</h2>
-									<p>Одной из работ в которой я применил все полученые знания в процессе переобучения, является создание веб-сайта <a href="https://fitnesstoall.by"><b>Fitnesstoall.by</b></a>. Данный сайт написан на Java, развёрнут на AWS EC2 инстансе. На исходный код проекта можно посмотреть <a href="https://github.com/yarrou/siteToOK"><b>здесь</b></a>. </p>
+									<span th:utext="${examples}"></span>
 								</div>
 								<div class="image filtered tinted" data-position="top right">
 									<img src="images/site_example.jpg" alt="" />
@@ -125,8 +135,7 @@
 
 						<section class="panel color4-alt">
 							<div class="intro">
-								<h2 class="major">Связаться со мной</h2>
-								<p>Я буду рад ответить на ваши вопросы и услышать предложения.</p>
+								<span th:utext="${contacts}"></span>
 							</div>
 							<div class="inner columns divided">
 								<!--<div class="span-3-25">
@@ -430,7 +439,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 										</form>
 									</div>
 								</div>
-							</section>-->
+							</section> -->
 
 						<!-- Copyright
 							<div class="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</div>-->
