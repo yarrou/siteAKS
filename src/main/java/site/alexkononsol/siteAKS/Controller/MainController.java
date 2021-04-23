@@ -1,18 +1,24 @@
 package site.alexkononsol.siteAKS.Controller;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import javax.servlet.http.HttpServletRequest;
+
 @Controller
 public class MainController {
+    private static final Logger logger = LoggerFactory.getLogger(MainController.class);
     @GetMapping("/")
-    public String testPage(@RequestParam(defaultValue = "ru")String lng , ModelMap model){
+    public String testPage(@RequestParam(defaultValue = "ru")String lng , ModelMap model, HttpServletRequest request){
+        logger.info("new connect from ip {} , and language is {}",request.getRemoteAddr(),lng);
         String greeting="",history="",retraining="",examples="",contacts="";
         if(lng.equals("by")){
             greeting = "<h1 class=\"major\" ><font color=\"#000000\">Вітаю, <br />мяне завуць - <br />Аляксандр <br/>Канановіч</font></h1>";
-            history = "<h2 class=\"major\">Прафесія і хобі. </h2><p>Працяглы час я працаваў у сферы абслугоўвання і рамонту на вядучым горна-здабываюць прадпрыемстваў рэспублікі. Праграмаванне на java было заняткам для душы. Аднак пасля падзей лета 2020 і рэпрэсій у дачыненні да мяне, я зразумеў, што мне прыйдзецца змяніць прафесію.</p>";
+            history = "<h2 class=\"major\">Прафесія і хобі. </h2><p>Працяглы час я працаваў у сферы абслугоўвання і рамонту на вядучым горна-здабывальным прадпрыемстве рэспублікі. Праграмаванне на java было заняткам для душы. Аднак пасля падзей лета 2020 і рэпрэсій у дачыненні да мяне, я зразумеў, што мне прыйдзецца змяніць прафесію.</p>";
             retraining = "<h2 class=\"major\">Перанавучанне.</h2><p> Па дапамогу я звярнуўся ў фонд \"ByHelp\".Па ментарскай праграме перанавучання я пад кіраўніцтвам праграміста з 12-гадовым стажам вывучаў наступныя тэхналогіі : <b>Spring framework</b>, <b>Git</b>, <b>SQL</b>, <b>HTML</b>, <b>CSS</b>, <b>JS</b>.</p>";
             examples = "<h2 class=\"major\">Прыклады прац.</h2><p>Адна з работ, у якой я ужыў усе веды, атрыманыя ў працэсе перападрыхтоўкі - гэта стварэнне сайта <a href=\"https://fitnesstoall.by\"><b>Fitnesstoall.by</b></a>. Гэты сайт напісаны на Java і разгорнуты на экзэмпляры AWS EC2. Зыходны код праекта можна паглядзець <a href=\"https://github.com/yarrou/siteToOK\"><b>тут</b></a>. </p>";
             contacts = "<h2 class=\"major\">Звязацца са мной </h2><p>Я буду рады адказаць на вашы пытанні і пачуць прапановы.</p>";
