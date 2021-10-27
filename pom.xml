@@ -11,7 +11,7 @@
 
     <groupId>site.alexkononsol</groupId>
     <artifactId>siteAKS</artifactId>
-    <version>0.1.0-DEV</version>
+    <version>0.1.0</version>
     <name>siteAKS</name>
     <description>site Alexkononsol.site</description>
 
@@ -60,6 +60,14 @@
             <artifactId>slf4j-api</artifactId>
             <version>1.7.30</version>
         </dependency>
+
+        <!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.11.0</version>
+        </dependency>
+
     </dependencies>
 
     <build>
@@ -78,6 +86,14 @@
                         </goals>
                     </execution>
                 </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>9</source>
+                    <target>9</target>
+                </configuration>
             </plugin>
         </plugins>
     </build>
