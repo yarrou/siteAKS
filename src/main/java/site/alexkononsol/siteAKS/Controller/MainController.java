@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 public class MainController {
     private static final Logger logger = LoggerFactory.getLogger(MainController.class);
     @GetMapping("/")
-    public String testPage(@RequestParam(defaultValue = "ru")String lng , ModelMap model, HttpServletRequest request){
+    public String testPage(@RequestParam(defaultValue = "eng")String lng , ModelMap model, HttpServletRequest request){
         logger.info("new connect from ip {} , and language is {}",request.getRemoteAddr(),lng);
         String greeting="",history="",retraining="",examples="",contacts="",buttonCV="";
         if(lng.equals("by")){
