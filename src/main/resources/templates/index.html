@@ -55,17 +55,17 @@
                 <div align="right">
                     <ul class="hr">
                         <li>
-                            <a th:href="@{/(lng='by')}"><img src="images/by-icon.png"></a>
+                            <a th:href="@{/(lang='by')}"><img src="images/by-icon.png"></a>
                         </li>
                         <li>
-                            <a th:href="@{/(lng='ru')}"><img src="images/ru-icon.png"></a>
+                            <a th:href="@{/(lang='ru')}"><img src="images/ru-icon.png"></a>
                         </li>
                         <li>
-                            <a th:href="@{/(lng='eng')}"><img src="images/engl-icon.png"></a>
+                            <a th:href="@{/(lang='en')}"><img src="images/engl-icon.png"></a>
                         </li>
                     </ul>
                 </div>
-                <span th:utext="${greeting}"></span>
+                <span th:utext="#{greeting}"></span>
                 <!--<p>This is <strong>Ethereal</strong>, a free site template by AJ for <a href="https://html5up.net">HTML5 UP</a>. It’s fully responsive, built on HTML5 and CSS3, and released entirely for free under the Creative Commons license. Hope you dig it :)</p>-->
                 <ul class="actions">
                     <li><a href="#first" class="button primary color1 circle icon solid fa-angle-right">Next</a></li>
@@ -79,7 +79,7 @@
         <!-- Panel (Spotlight) -->
         <section class="panel spotlight medium right" id="first">
             <div class="content span-7">
-                <span th:utext="${history}"></span>
+                <span th:utext="#{my.history}"></span>
             </div>
             <div class="image filtered tinted" data-position="top left">
                 <img src="images/4ru-sharp.jpg" alt=""/>
@@ -90,7 +90,7 @@
         <section class="panel spotlight medium right" id="name1">
             <div class="content span-5">
                 <div>
-                    <span th:utext="${retraining}"></span>
+                    <span th:utext="#{retraining}"></span>
                 </div>
                 <div class="inner">
                     <ul class="hr">
@@ -114,7 +114,7 @@
         <!--Panel (Spotlight)-->
         <section class="panel spotlight large left">
             <div class="content span-5">
-                <span th:utext="${examples}"></span>
+                <span th:utext="#{examples}"></span>
             </div>
             <div class="image filtered tinted" data-position="top right">
                 <img src="images/site_example.jpg" alt=""/>
@@ -148,10 +148,10 @@
 
         <section class="panel color4-alt">
             <div class="intro">
-                <span th:utext="${contacts}"></span>
+                <span th:utext="#{my.contacts}"></span>
                 <br>
                 <a th:href="@{/get-cv(lng=${language})}" class="button">
-                    <span th:utext="${buttonCV}"></span>
+                    <span th:utext="#{buttonCV}"></span>
                 </a>
             </div>
 
