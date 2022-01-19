@@ -15,13 +15,13 @@ public class PdfController {
             produces = MediaType.APPLICATION_PDF_VALUE
     )
     public @ResponseBody
-    byte[] getPdfWithMediaType(@RequestParam(defaultValue = "ru")String lng ) throws IOException {
+    byte[] getPdfWithMediaType(@RequestParam(defaultValue = "en")String lng ) throws IOException {
         String pathToCV = null;
-        if(lng.equals("eng")){
-            pathToCV = "static/pdf/Aleksandr Kononovich_cv_eng.pdf";
+        if(lng.equals("ru")){
+            pathToCV = "static/pdf/Aleksandr Kononovich_cv_ru.pdf";
         }else if(lng.equals("by")){
             pathToCV = "static/pdf/Aleksandr Kononovich_cv_by.pdf";
-        }else pathToCV = "static/pdf/Aleksandr Kononovich_cv_ru.pdf";
+        }else pathToCV = "static/pdf/Aleksandr Kononovich_cv_eng.pdf";
         byte[] content = SiteAksApplication.class.getClassLoader().getResourceAsStream(pathToCV).readAllBytes();
         return content;
     }
