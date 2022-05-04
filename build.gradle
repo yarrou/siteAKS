@@ -6,7 +6,7 @@ plugins {
 }
 
 group = 'site.alexkononsol'
-version = '0.0.6-DEV'
+version = '0.0.7-DEV'
 sourceCompatibility = '11'
 
 repositories {
