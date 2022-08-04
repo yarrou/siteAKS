@@ -11,10 +11,9 @@
 
     <groupId>site.alexkononsol</groupId>
     <artifactId>siteAKS</artifactId>
-    <version>0.2.0</version>
+    <version>0.3.0</version>
     <name>siteAKS</name>
     <description>site Alexkononsol.site</description>
-
 
 
     <dependencies>
@@ -26,19 +25,19 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
-            <version>2.4.5</version>
+            <version>2.7.2</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-security -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-security</artifactId>
-            <version>2.4.5</version>
+            <version>2.7.2</version>
         </dependency>
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
-            <!--<version>2.4.3</version> -->
+            <version>2.7.2</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -48,17 +47,17 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-maven-plugin</artifactId>
-            <version>2.4.3</version>
+            <version>2.7.2</version>
         </dependency>
         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
-            <version>1.2.3</version>
+            <version>1.2.11</version>
         </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
-            <version>1.7.30</version>
+            <version>1.7.36</version>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
@@ -68,8 +67,12 @@
             <version>2.11.0</version>
         </dependency>
 
+        <dependency>
+            <groupId>de.dentrassi.crypto</groupId>
+            <artifactId>pem-keystore</artifactId>
+            <version>2.2.1</version> <!-- check for most recent version -->
+        </dependency>
     </dependencies>
-
     <build>
         <plugins>
             <plugin>
