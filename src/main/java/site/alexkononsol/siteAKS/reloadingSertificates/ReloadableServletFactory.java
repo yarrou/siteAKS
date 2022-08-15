@@ -1,4 +1,4 @@
-package site.alexkononsol.siteAKS.reload;
+package site.alexkononsol.siteAKS.reloadingSertificates;
 
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
