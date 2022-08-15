@@ -1,4 +1,4 @@
-package site.alexkononsol.siteAKS.reload;
+package site.alexkononsol.siteAKS.reloadingSertificates;
 
 import lombok.Cleanup;
 import lombok.SneakyThrows;
