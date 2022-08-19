@@ -55,16 +55,21 @@
                 <div align="right">
                     <ul class="hr">
                         <li>
-                            <a th:href="@{/(lang='by')}"><img src="images/by-icon.png"></a>
+                            <img th:src="#{imgLink}">
                         </li>
                         <li>
-                            <a th:href="@{/(lang='ru')}"><img src="images/ru-icon.png"></a>
-                        </li>
-                        <li>
-                            <a th:href="@{/(lang='en')}"><img src="images/engl-icon.png"></a>
+                            <select name="demo-category" id="locales">
+                                <option value="" ></option>
+                                <option value="de" >de</option>
+                                <option value="eng" >en</option>
+                                <option value="by" >by</option>
+                                <option value="ru" >ru </option>
+                            </select>
                         </li>
                     </ul>
+
                 </div>
+
                 <span th:utext="#{greeting}"></span>
                 <!--<p>This is <strong>Ethereal</strong>, a free site template by AJ for <a href="https://html5up.net">HTML5 UP</a>. It’s fully responsive, built on HTML5 and CSS3, and released entirely for free under the Creative Commons license. Hope you dig it :)</p>-->
                 <ul class="actions">
@@ -199,7 +204,7 @@
             </div>
         </section>
 
-        <!-- Panel
+        <!-- Panel -->
             <section class="panel color2-alt">
                 <div class="intro color2">
                     <h2 class="major">Elements</h2>
@@ -448,7 +453,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
                         </form>
                     </div>
                 </div>
-            </section> -->
+            </section>
 
         <!-- Copyright
             <div class="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</div>-->
@@ -463,6 +468,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 <script src="/assets/js/breakpoints.min.js"></script>
 <script src="/assets/js/main.js"></script>
 <script src="/assets/js/cookie.notice.js"></script>
+<script src="/assets/js/internationalization.js"></script>
 
 </body>
 </html>
